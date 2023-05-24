@@ -14,7 +14,7 @@ def main():
     table_data.append(['SKU', 'Retail Price', 'Unit of Measure', 'Region', 'Meter', 'Product Name'])
     
     api_url = "https://prices.azure.com/api/retail/prices?api-version=2021-10-01-preview"
-    query = "armRegionName eq 'southcentralus' and armSkuName eq 'Standard_NP20s' and priceType eq 'Consumption' and contains(meterName, 'Spot')"
+    query = "armRegionName eq 'eastus' and armSkuName eq 'Standard_NP20s' and priceType eq 'Consumption' and contains(meterName, 'Spot')"
     response = requests.get(api_url, params={'$filter': query})
     json_data = json.loads(response.text)
     
